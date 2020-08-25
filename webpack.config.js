@@ -44,6 +44,12 @@ module.exports = {
         },
       },
 
+      // FILE LOADER - fonts
+      {
+        test: /\.(woff|ttf)$/,
+        use: ['file-loader'],
+      },
+
       // CSS LOADER + split plug
       {
         test: /\.css$/,
