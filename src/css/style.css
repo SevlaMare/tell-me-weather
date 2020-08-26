@@ -2,5 +2,8 @@ main {
   height: 350px;
   width: 250px;
   margin: 50px auto;
-  border: 1px solid #333;
+}
+
+.title.capitalize {
+  text-transform: capitalize;
 }
