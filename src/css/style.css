@@ -16,7 +16,7 @@ main {
 }
 
 #bg-weather {
-  width: 150px;
+  margin-left: -30px;
 }
 
 .title.capitalize {

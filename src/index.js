@@ -1,5 +1,5 @@
 import render from './render';
-import { sel } from './helpers';
+import sel from './helpers';
 import './css/style.css';
 import './css/form.css';
 
@@ -11,8 +11,12 @@ const fetchData = async (url) => {
   if (response.status === 404) { return console.error('BAD REQUEST | City not found'); }
   const data = await response.json();
 
-  console.log(data)
-  return { name: data.name, temperature: data.main.temp, weather: data.weather[0].main, icon: data.weather[0].icon };
+  return {
+    name: data.name,
+    temperature: data.main.temp,
+    weather: data.weather[0].main,
+    icon: data.weather[0].icon,
+  };
 };
 
 const safeFetch = (url) => {
