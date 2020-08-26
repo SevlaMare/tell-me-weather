@@ -1,11 +1,12 @@
 import { createContent, createContainer, sel } from './helpers';
 
 const render = (city, temp, weather) => {
-  const box = createContainer('div', 'container');
-  const titleInfo = createContent('h1', 'Weather Now');
-  const tempInfo = createContent('p', '1000°C');
+  const box = createContainer('div');
+  const cityInfo = createContent('h1', `${city}`);
+  const tempInfo = createContent('h2', `${temp}`);
+  const weatherInfo = createContent('p', `${weather}`);
 
-  box.append(titleInfo, tempInfo);
+  box.append(cityInfo, tempInfo, weatherInfo);
   sel('main').append(box);
 };
 
