@@ -1,12 +1,12 @@
-import { createContent, createContainer, sel } from './helpers.js';
+import { createContent, createContainer, sel } from './helpers';
 
-const render = () => {
-  const box = createContainer('div', 'container')
-  const title = createContent('h1', 'Weather Now')
-  const temp = createContent('p', '1000 degrees right now')
+const render = (city, temp, weather) => {
+  const box = createContainer('div', 'container');
+  const titleInfo = createContent('h1', 'Weather Now');
+  const tempInfo = createContent('p', '1000°C');
 
-  box.append(title, temp)
-  sel('main').append(box)
+  box.append(titleInfo, tempInfo);
+  sel('main').append(box);
 };
 
 export default render;
