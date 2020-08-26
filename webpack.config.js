@@ -14,16 +14,6 @@ module.exports = {
 
   module: {
     rules: [
-      // BABEL
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: { cacheDirectory: true },
-      //   },
-      // },
-
       // HTML LOADER + plug
       {
         test: /\.html$/,
@@ -32,19 +22,29 @@ module.exports = {
         ],
       },
 
-      // FILE LOADER - IMAGES
+      // FILE LOADER - image
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg)$/,
         loader: 'file-loader',
         options: {
           name: 'img/[name].[ext]',
           output: 'img/',
-          // css url path after build
+          // url path inside css AND html after build
           publicPath: '../',
         },
       },
 
-      // FILE LOADER - FONTS
+      // FILE LOADER - icon
+      {
+        test: /\.(svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'ico/[name].[ext]',
+          output: 'ico/',
+        },
+      },
+
+      // FILE LOADER - font
       {
         test: /\.(woff|ttf)$/,
         use: ['file-loader'],
@@ -71,7 +71,6 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      // css output path
       filename: 'css/[name].css',
     }),
 

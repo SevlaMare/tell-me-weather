@@ -1,15 +1,13 @@
 import { sel } from './helpers';
 
-const render = (city, temp, weather) => {
+const render = (city, temp, weather, ico) => {
   sel('#cityDisplay').innerHTML = `${city}`;
   sel('#tempDisplay').innerHTML = `${Math.trunc(temp)} °C`;
   sel('#weatherDisplay').innerHTML = `${weather}`;
 
-  // let icon = './cloud.svg'
-  // if (weather == 'clouds') { icon = '../cloud.svg' }
-  // else if (weather == 'rain') { icon = '../rain.svg' }
-  // else if (weather == 'snow') { icon = '../snow.svg' }
-  sel('#bg-weather').setAttribute('src', './cloud.svg')
+
+  let icon = `https://openweathermap.org/img/wn/${ico}@2x.png`
+  sel('#bg-weather').setAttribute('src', icon)
 };
 
 export default render;
