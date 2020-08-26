@@ -49,7 +49,6 @@ module.exports = {
         test: /\.(woff|ttf)$/,
         use: ['file-loader'],
       },
-      
 
       // CSS LOADER + split plug
       {

@@ -21,15 +21,14 @@ You can access a deployed version of this app:<br>
 https://raw.githack.com/SevlaMare/todo-list/feature-app/src/index.html
 
 ## Requirements
+- [x] Integration with a external API
 - [x] Setup webpack to build all from source(src) to distribuition(dist) folder
 - [x] Setup npm/yarn scripts to linters, server and webpack build
-- [x] Implement tabs, move between them using HTML, CSS and JS only
 
 
 ## Pre-requisites
 <ul>
 	<li>Node</li>
-	<li>Npm</li>
 	<li>Yarn</li>
 	<li>Web browser</li>
 </ul>
@@ -39,7 +38,7 @@ https://raw.githack.com/SevlaMare/todo-list/feature-app/src/index.html
 - Javascript<br>
 - HTML/CSS <br>
 - Webpack <br>
-- ESlint and Stylint (Linters) <br>
+- ESlint and Stylelint (Linters) <br>
 - GitHub Actions (CI Tool) <br>
 - Git, Github and VScode <br>
 
