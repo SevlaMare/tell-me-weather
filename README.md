@@ -18,7 +18,7 @@
 
 ## Live Demo
 You can access a deployed version of this app:<br>
-https://raw.githack.com/SevlaMare/todo-list/feature-app/src/index.html
+https://weather-app-007.web.app/
 
 ## Requirements
 - [x] Integration with a external API
