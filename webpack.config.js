@@ -32,9 +32,9 @@ module.exports = {
         ],
       },
 
-      // FILE LOADER - images
+      // FILE LOADER - IMAGES
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|svg)$/,
         loader: 'file-loader',
         options: {
           name: 'img/[name].[ext]',
@@ -44,11 +44,12 @@ module.exports = {
         },
       },
 
-      // FILE LOADER - fonts
+      // FILE LOADER - FONTS
       {
         test: /\.(woff|ttf)$/,
         use: ['file-loader'],
       },
+      
 
       // CSS LOADER + split plug
       {

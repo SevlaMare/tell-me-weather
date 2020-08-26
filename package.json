@@ -1,7 +1,7 @@
 {
-  "name": "to-do-list",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "A to-do list page.",
+  "description": "Check weather for any city.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
