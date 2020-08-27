@@ -6,10 +6,6 @@ import './css/switch.css';
 
 const api = '6ca8aaad293b0b0a3ad93f29e82425f8';
 
-// const safeFetch = (url) => {
-//   try { return fetchData(url); } catch (err) { return console.warn('Bad request |', err); }
-// };
-
 const displayError = (msg) => { sel('#error').innerHTML = msg; };
 
 const fetchData = async (url) => {
