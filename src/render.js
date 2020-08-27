@@ -1,10 +1,9 @@
-import { createContent, createContainer, sel } from './helpers';
+import { sel } from './helpers';
 
 const render = (city, temp, weather, ico) => {
   const icon = `https://openweathermap.org/img/wn/${ico}@4x.png`;
-  const tempC = Math.trunc(temp)
   sel('#cityDisplay').innerHTML = `${city}`;
-  sel('#tempDisplay').innerHTML = `${tempC}`;
+  sel('#tempDisplay').innerHTML = `${Math.trunc(temp)}`;
   sel('#weatherDisplay').innerHTML = `${weather}`;
   sel('#bg-weather').setAttribute('src', icon);
 
@@ -17,6 +16,10 @@ const render = (city, temp, weather, ico) => {
     bg.style.background = 'orange';
   } else {
     bg.style.background = 'gray';
+  }
+
+  if (sel('#unitsTemp').checked !== true) {
+    sel('#tempDisplay').innerHTML = (sel('#tempDisplay').innerHTML * (9 / 5) + 32).toFixed(2);
   }
 };
 

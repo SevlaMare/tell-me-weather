@@ -15,5 +15,5 @@ main {
 }
 
 #bg-weather { margin-left: -30px; }
-/* #tempDisplay:after { content: " °" } */
+#tempDisplay::after { content: " °"; }
 .title.capitalize { text-transform: capitalize; }

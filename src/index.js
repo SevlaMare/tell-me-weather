@@ -35,9 +35,14 @@ sel('#btnSend').addEventListener('click', (event) => {
   event.preventDefault();
 });
 
-sel('#btnTemp').addEventListener('click', () => {
-  if (!(sel('#units').checked)) { 
-    let fahreheti = sel('#tempDisplay').innerHTML * 1.8 + 32
-    sel('#tempDisplay').innerHTML = fahreheti
+sel('#unitsTemp').addEventListener('click', () => {
+  if (sel('#unitsTemp').checked !== true) {
+    const celsius = sel('#tempDisplay').innerHTML;
+    const fahrenheit = (celsius * (9 / 5) + 32).toFixed(2);
+    sel('#tempDisplay').innerHTML = fahrenheit;
+  } else {
+    const fahrenheit = sel('#tempDisplay').innerHTML;
+    const celsius = ((fahrenheit - 32) * (5 / 9)).toFixed(2);
+    sel('#tempDisplay').innerHTML = celsius;
   }
-})
+});
