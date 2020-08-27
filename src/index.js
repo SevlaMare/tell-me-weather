@@ -24,7 +24,12 @@ const fetchData = async (url) => {
 sel('#btnSend').addEventListener('click', (event) => {
   const cityInput = sel('#city').value;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=${api}`;
-  fetchData(url).then((info) => { render(info.name, info.temperature, info.weather, info.icon); });
+  fetchData(url).then((info) => {
+    const {
+      name, temperature, weather, icon,
+    } = info;
+    render(name, temperature, weather, icon);
+  });
   event.preventDefault();
 });
 
