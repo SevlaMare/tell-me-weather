@@ -1,3 +1,21 @@
+const createContent = (tag, className, text) => {
+  const element = document.createElement(tag);
+
+  if (text) { element.innerHTML = text; }
+  if (className) { element.className = className; }
+
+  return element;
+};
+
+const createContainer = (tag, className, idName) => {
+  const element = document.createElement(tag);
+
+  if (className) { element.className = className; }
+  if (idName) { element.id = idName; }
+
+  return element;
+};
+
 const sel = (selector) => document.querySelector(selector);
 
-export default sel;
+export { createContent, createContainer, sel };

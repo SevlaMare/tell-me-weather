@@ -1,5 +1,5 @@
 import render from './render';
-import sel from './helpers';
+import {sel} from './helpers';
 import './css/style.css';
 import './css/form.css';
 
