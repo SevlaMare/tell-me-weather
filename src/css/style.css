@@ -14,10 +14,6 @@ main {
   margin: 50px auto;
 }
 
-#bg-weather {
-  margin-left: -30px;
-}
-
-.title.capitalize {
-  text-transform: capitalize;
-}
+#bg-weather { margin-left: -30px; }
+/* #tempDisplay:after { content: " °" } */
+.title.capitalize { text-transform: capitalize; }

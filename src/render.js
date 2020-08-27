@@ -2,14 +2,15 @@ import { createContent, createContainer, sel } from './helpers';
 
 const render = (city, temp, weather, ico) => {
   const icon = `https://openweathermap.org/img/wn/${ico}@4x.png`;
+  const tempC = Math.trunc(temp)
   sel('#cityDisplay').innerHTML = `${city}`;
-  sel('#tempDisplay').innerHTML = `${Math.trunc(temp)} °C`;
+  sel('#tempDisplay').innerHTML = `${tempC}`;
   sel('#weatherDisplay').innerHTML = `${weather}`;
   sel('#bg-weather').setAttribute('src', icon);
 
   const bg = document.body;
   if (weather === 'Rain') {
-    bg.style.background = 'blue';
+    bg.style.background = 'lightblue';
   } else if (weather === 'Snow') {
     bg.style.background = 'white';
   } else if (weather === 'Clear') {

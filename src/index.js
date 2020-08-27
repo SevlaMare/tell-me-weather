@@ -1,7 +1,8 @@
 import render from './render';
-import {sel} from './helpers';
+import { sel } from './helpers';
 import './css/style.css';
 import './css/form.css';
+import './css/switch.css';
 
 const api = '6ca8aaad293b0b0a3ad93f29e82425f8';
 
@@ -33,3 +34,10 @@ sel('#btnSend').addEventListener('click', (event) => {
 
   event.preventDefault();
 });
+
+sel('#btnTemp').addEventListener('click', () => {
+  if (!(sel('#units').checked)) { 
+    let fahreheti = sel('#tempDisplay').innerHTML * 1.8 + 32
+    sel('#tempDisplay').innerHTML = fahreheti
+  }
+})
