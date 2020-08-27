@@ -6,6 +6,7 @@ const render = (city, temp, weather, ico) => {
   sel('#tempDisplay').innerHTML = `${Math.trunc(temp)}`;
   sel('#weatherDisplay').innerHTML = `${weather}`;
   sel('#bg-weather').setAttribute('src', icon);
+  sel('#error').innerHTML = '';
 
   const bg = document.body;
   if (weather === 'Rain') {
