@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../Montserrat-Regular.ttf");
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 250px;
+  margin: 50px auto;
+}
+
+#bg-weather { margin-left: -30px; }
+#tempDisplay::after { content: " °"; }
+.title.capitalize { text-transform: capitalize; }
+
+#error-box {
+  width: fit-content;
+  margin: 20px auto;
+  background: #fb6a57;
+}
+
+#error {
+  font-size: 1.2rem;
+  color: #fff;
+}
