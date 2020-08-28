@@ -6,6 +6,37 @@
   <title>Tell me Weather</title>
 </head>
 <body>
+  <form>
+    <header>
+      <div class="field">
+        <input type="text" id="city" placeholder="CITY" required>
+        <span class="error-msg"></span>
+      </div>
   
+      <div class="field">
+        <input id="btnSend" type="submit" value="Weather now">
+      </div>
+
+      <label class="switch" id="btnTemp">
+        <input id="unitsTemp" type="checkbox" checked>
+        <span class="slider round"></span>
+        <span class="on-label label">°C</span>
+        <span class="off-label label">°F</span>
+      </label>
+    </header>
+  </form>
+
+  <div id="error-box">
+    <span id="error"></span>
+  </div>
+
+  <main>
+    <div id="info">
+      <h1 id="cityDisplay"></h1>
+      <h2 id="tempDisplay"></h2>
+      <img id="bg-weather">
+      <h3 id="weatherDisplay" class="title"></h3>
+    </div>
+  </main>
 </body>
 </html>
